@@ -1,2 +1,4 @@
 venv
 venv/*
+test_file.png
+btpackage/__pycache__
