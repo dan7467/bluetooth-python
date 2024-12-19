@@ -2,7 +2,7 @@ import bluetooth as bt
 
 class RFCOMMServer:
     
-    def __init__(self, port=1):
+    def __init__(self, port = 1):
     
         self.socket=bt.BluetoothSocket( bt.RFCOMM )
         
