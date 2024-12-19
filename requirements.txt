@@ -1,4 +1,2 @@
-# PyBluez @ git+https://github.com/pybluez/pybluez@82cbba8a1ebd4c1e3442dfafd8581d58c50fa39e
 Pybluez==0.30
-# pip install git+https://github.com/pybluez/pybluez#egg=Pybluez
-pyobex==0.31
+# PyBluez @ git+https://github.com/pybluez/pybluez@82cbba8a1ebd4c1e3442dfafd8581d58c50fa39e
