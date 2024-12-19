@@ -15,9 +15,16 @@ class AVRemoteControlTarget:
         self.connect()
 
     def connect(self):
-        print(f"\n Connecting to AV Remote Control Target ({self.target_address}) on port {self.port}...")
-        self.client_socket.connect((self.target_address, self.port))
-        print("\n Connected!")
+        try:
+            print(f"\n Connecting to AV Remote Control Target ({self.target_address}) on port {self.port}...")
+            self.client_socket.connect((self.target_address, self.port))
+            print("\n Connected!")
+        except bt.BluetoothError as e:
+            print(f"BluetoothError: {e}")
+        except OSError as e:
+            print(f"OSError: {e}")
+        except Exception as e:
+            print(f"General Error: {e}")
 
     def operate(self):
         print("\n Welcome to AV Remote Control!")
