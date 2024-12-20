@@ -2,4 +2,5 @@ venv
 venv/*
 private.txt
 test_file.png
+test_song.mp3
 btpackage/__pycache__

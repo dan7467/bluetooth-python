@@ -1,6 +1,7 @@
 import bluetooth as bt
 from .obex_file_transfer_handler import send_file_via_obex
 from .av_remote_control import AVRemoteControlTarget
+from .advanced_audio_source import AdvancedAudioSource
 
 class RFCOMMClient:
     
@@ -80,7 +81,9 @@ class RFCOMMClient:
                 av_remote_control.operate()
                             
             elif target_port == 25: # Advanced Audio Source
-                pass
+                advanced_audio_src = AdvancedAudioSource(target_address = target_address, port = target_port)
+                audio_path_and_filename = input(f'\n\n Enter path + filename for audio to stream to {self.name_of_addr[target_address]}: \n\n')
+                advanced_audio_src.stream_audio(audio_path_and_filename)
                 
             else:
                 print("\n Not yet implemented.")
